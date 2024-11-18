@@ -1,11 +1,11 @@
 export interface PokemonReference {
     name: string,
-    url: URL,
+    url: string,
 }
 
 export interface Pokelist {
     count:number,
-    next: URL|null,
-    previous: URL|null,
+    next: string|null,
+    previous: string|null,
     results: PokemonReference[],
 }

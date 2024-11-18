@@ -1,13 +1,15 @@
 import { Component, inject } from "@angular/core";
 import { PokelistService } from "./shared/pokelist-service";
 import { Pokelist, PokemonReference } from "./shared/pokelist.type";
+import { PokemonComponent } from "./pokemon/pokemon.component";
 
 @Component({
-    selector: 'pokemon-library',
+    selector: 'app-pokemon-library',
+    imports: [PokemonComponent],
     template: `
         @if (pokemons){
-            @for (pokemon of pokemons; track pokemon) {
-                <p >{{ pokemon.name }}</p>
+            @for (pokemon of pokemons; track pokemon.name) {
+                <app-pokemon [pokemonReference]="pokemon" />
             }
         } @else {
          <p>Fetching Pokémon list</p>

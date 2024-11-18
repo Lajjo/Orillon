@@ -1,0 +1,10 @@
+@if(pokemon){
+
+    <div>
+        <p>{{ pokemon.name }}</p>
+        <img [src]="pokemon.sprites.front_default"/>
+        
+    </div>
+} @else {
+    <p>Loading data for {{pokemonReference!.name}}</p>
+}

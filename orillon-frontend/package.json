@@ -5,10 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-deploy": "ng build --base-href 'https://lajjo.github.io/Orillon/'",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "deploy-ghpage": "angular-cli-ghpages --dir=dist/orillon-frontend/browser",
-    "deploy": "npm run build; npm run deploy-ghpage"
+    "deploy": "npm run build-deploy; npm run deploy-ghpage"
   },
   "private": false,
   "dependencies": {
